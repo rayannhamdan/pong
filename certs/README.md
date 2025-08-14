@@ -1,0 +1,1 @@
+Empty folder used to store the public and private keys for SSL communication

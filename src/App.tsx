@@ -103,7 +103,7 @@ function Inner() {
                 handleClose={() => setGameComplete(false)}
                 won={gameComplete?.won}
             />
-            <ThemeSwitcher inGame={screen === NAVIGATION_SCREENS.GAME} />
+            <ThemeSwitcher />
         </>
     )
 }

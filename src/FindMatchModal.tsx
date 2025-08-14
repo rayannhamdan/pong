@@ -16,8 +16,9 @@ import ListItemText from '@mui/material/ListItemText'
 import CircularProgress from '@mui/material/CircularProgress'
 import ListSubheader from '@mui/material/ListSubheader'
 import RefreshIcon from '@mui/icons-material/Refresh'
-import { Typography, useMediaQuery, useTheme } from '@mui/material'
+import Typography from '@mui/material/Typography'
 import Box from '@mui/material/Box'
+import { useMediaQuery, useTheme } from '@mui/material'
 
 type Match = {
     match: string

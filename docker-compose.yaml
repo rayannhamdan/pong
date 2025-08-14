@@ -1,0 +1,32 @@
+services:
+  back:
+    image: rayhamdan/pong-back
+    restart: unless-stopped
+    volumes:
+      - ./certs:/var/www/certs
+    ports:
+      - "5001:5001"
+    depends_on:
+      - redis
+
+  redis:
+    image: redis:8.2.0
+    restart: unless-stopped
+    volumes:
+      - ./redis:/usr/local/etc/redis
+    entrypoint:
+      - redis-server
+      - /usr/local/etc/redis/redis.conf
+    ports:
+      - "6379"
+
+  nginx:
+    image: rayhamdan/pong-front
+    restart: unless-stopped
+    volumes:
+      - ./certs:/var/www/certs
+    ports:
+      - "80:80"
+      - "443:443"
+    depends_on:
+      - back

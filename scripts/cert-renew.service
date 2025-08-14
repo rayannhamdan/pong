@@ -1,0 +1,12 @@
+[Unit]
+Description=Renew HTTPS certificate
+After=local-fs.target
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/cert-renew.sh
+RemainAfterExit=true
+Type=oneshot
+
+[Install]
+WantedBy=multi-user.target

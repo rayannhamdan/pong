@@ -3,7 +3,7 @@ import { PhysicsContext } from './physics.ts'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 import Divider from '@mui/material/Divider'
-import { Slide } from '@mui/material'
+import Slide from '@mui/material/Slide'
 
 function ScoreCounter({
     score,

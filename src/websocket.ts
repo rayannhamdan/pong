@@ -1,7 +1,9 @@
 import React from 'react'
 import { io, Socket } from 'socket.io-client'
 
-export const socket = io(`ws://${window.location.hostname}:5001`)
+export const socket = io(
+    `${import.meta.env.PROD ? 'wss' : 'ws'}://${window.location.hostname}:5001`
+)
 
 export const SocketContext = React.createContext<{
     isConnected: boolean
